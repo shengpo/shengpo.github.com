@@ -7,7 +7,7 @@ the main website of Shen, Sheng-Po 's art works
 - - - - - - -
 
 Quick info
------------
+---
 . [website](http://shengpo.github.com)
 
 . [profile](http://shengpo.github.com/profile.html)
