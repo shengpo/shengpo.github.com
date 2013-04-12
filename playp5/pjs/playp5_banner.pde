@@ -11,6 +11,7 @@
  License: CC BY-SA 3.0
  ***********************************/
 
+
 Graffiti graffiti = null;
 
 int changeCount = 0;
@@ -21,7 +22,12 @@ void setup() {
         size(window.innerWidth - 20, 50);
         background(255);
         smooth();
+        
+        //for text
+//        textFont(createFont("Serif", 20));  
+        textFont(createFont("Ubuntu", 20));  
 
+        //for drawing
         graffiti = new Graffiti();
 }
 
@@ -37,6 +43,10 @@ void draw() {
 
         //change graffiti drawing's style
         changeGraffitiStyle();
+        
+        //show play+processing
+        fill(0, 0, 39);
+        text("play + processing", 10, height-10);
 }
 
 
