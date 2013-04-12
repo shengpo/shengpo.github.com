@@ -45,7 +45,7 @@ void draw() {
         changeGraffitiStyle();
         
         //show play+processing
-        fill(0, 0, 39);
+        fill(0, 0, 85);
         text("play + processing", 10, height-10);
 }
 
