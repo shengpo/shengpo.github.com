@@ -55,7 +55,8 @@
 			}
 		});
 	});
-	$("div.m-collapsed").ajaxSuccess(function(){
+
+	$("div.m-collapsed").on("click", function(){
 		//convert youtube/vimeo links to embedded player
 		$("div.m-body a").each(function(){
 			if($(this).attr('href') == $(this).text()){
