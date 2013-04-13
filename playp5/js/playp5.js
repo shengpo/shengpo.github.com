@@ -28,16 +28,17 @@ function convertMediaLinks(){
 		}
 	});
 
-/*
+
 	//convert image links
 	$("div.m-body a").each(function(){
 		var url = $(this).attr('href'); 
-		if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
-			$(this).replaceWith("<a href='"+url+"'><img src='"+url+"' /></a>");
+		if(!url.match(/(http(s?):)|([\/|.|\w|\s])*"/)){	//避免url被moot誤判, 以奇怪的符號結尾, 例如："
+			if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
+				$(this).replaceWith("<a href='"+url+"'><img src='"+url+"' /></a>");
+			}
 		}
 	});
 	//$('.size-A').muImageResize({width: 150, height:200});
-*/
 }
 
 
