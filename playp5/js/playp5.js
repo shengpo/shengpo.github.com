@@ -9,8 +9,30 @@ by shengpo (shengpo.github.io)
 ************/
 
 
-//getEmbeddedPlayer() is modified from "http://labs.steveottenad.com/jquery-to-parse-youtube-vimeo-urls/"
-//used to parse youtube/vimeo links to embedded player
+
+//let window to convert video links periodly
+window.setInterval(convertVideoLinks, 1000);	//1000 milliseconds == 1 second
+
+
+
+//convert youtube/vimeo links to embedded player
+function convertVideoLinks(){
+	$("div.m-body a").each(function(){
+		if($(this).attr('href') == $(this).text()){
+			var url = $(this).text();
+			var output = getEmbeddedPlayer(url, 315, 560);	//parameters: url, player_height, player_width
+			if(output != ''){
+				$(this).replaceWith(output);
+			}
+		}
+	});
+}
+
+
+/*
+getEmbeddedPlayer() is modified from "http://labs.steveottenad.com/jquery-to-parse-youtube-vimeo-urls/"
+used to parse youtube/vimeo links to embedded player
+*/
 function getEmbeddedPlayer(url, height, width){
 	var output = '';
 	var youtubeUrl = url.match(/watch\?v=([a-zA-Z0-9\-_]+)/);
