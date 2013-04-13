@@ -70,9 +70,9 @@
 			});
 		});
 
-		window.setInterval(function(){
+		setInterval(function(){
 			if(location.href != curLocationHref){
-				curLocationHref = $(window).location.href;
+				curLocationHref = location.href;
 
 				//convert youtube/vimeo links to embedded player
 				$("div.m-body a").each(function(){
