@@ -43,7 +43,7 @@
       <!-- playp5 custom javascript -->
       <script src="js/playp5.js" type="text/javascript"></script>
       <script type="text/javascript">
-	$(document, "m-title").ajaxSuccess(function(){
+	$(document, "div.m-expanded").ajaxSuccess(function(){
 		//convert youtube/vimeo links to embedded player
 		$("div.m-body a").each(function(){
 			if($(this).attr('href') == $(this).text()){
