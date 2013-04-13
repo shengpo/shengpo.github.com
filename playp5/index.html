@@ -54,18 +54,18 @@
 				}
 			}
 		});
-	});
 
-	$("div.m-collapsed").on("click", function(){
-		//convert youtube/vimeo links to embedded player
-		$("div.m-body a").each(function(){
-			if($(this).attr('href') == $(this).text()){
-				var url = $(this).text();
-				var output = getEmbeddedPlayer(url, 315, 560);	//parameters: url, player_height, player_width
-				if(output != ''){
-					$(this).replaceWith(output);
+		$("div.m-collapsed").on("click", function(){
+			//convert youtube/vimeo links to embedded player
+			$("div.m-body a").each(function(){
+				if($(this).attr('href') == $(this).text()){
+					var url = $(this).text();
+					var output = getEmbeddedPlayer(url, 315, 560);	//parameters: url, player_height, player_width
+					if(output != ''){
+						$(this).replaceWith(output);
+					}
 				}
-			}
+			});
 		});
 	});
       </script>
