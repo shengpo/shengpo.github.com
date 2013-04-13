@@ -70,7 +70,7 @@
 			});
 		});
 
-		window.setTimeout(function(){
+		window.setInterval(function(){
 			if(location.href != curLocationHref){
 				curLocationHref = $(window).location.href;
 
@@ -85,7 +85,7 @@
 					}
 				});
 			}
-		}, 50);	//50 milliseconds
+		}, 500);	//500 milliseconds
 	});
       </script>
    </head>
