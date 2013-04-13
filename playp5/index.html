@@ -4,50 +4,27 @@
    <head>
       <title>Play+Processing Forum</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-      <!-- Optimize for mobile versions -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-      <!-- *** CSS part *** -->
-      <!-- Moot look and feel -->
-      <link rel="stylesheet" href="http://cdn.moot.it/1.0/moot.css"/>
-
-      <!-- playp5 custom CSS -->
-      <link rel="stylesheet" href="css/playp5.css"/>
+	
+      <!-- *** general setting *** -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">					<!-- Optimize for mobile versions -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" />	<!-- Moot/playp5 depends on jQuery v1.7 or greater -->
 
 
-      <!-- *** javascript part *** -->
-      <!-- Moot depends on jQuery v1.7 or greater -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <!-- *** original Moot setting *** -->
+      <link rel="stylesheet" href="http://cdn.moot.it/1.0/moot.css"/>			<!-- Moot look and feel -->
+      <script type="text/javascript" src="http://cdn.moot.it/1.0/moot.min.js" />	<!-- Moot client application -->
 
-      <!-- Moot client application -->
-      <script src="http://cdn.moot.it/1.0/moot.min.js"></script>
 
-      <!-- Processing+Processingjs -->
-      <script src="js/processing.js" type="text/javascript"></script>
+      <!-- *** customizing playp5 here *** -->
+      <link rel="stylesheet" href="css/playp5.css"/>		<!-- playp5 custom CSS -->
+      <script type="text/javascript" src="js/playp5.js"	/>	<!-- playp5 custom javascript -->
+      
+
+      <!-- *** Processing+Processingjs *** -->
+      <script type="text/javascript" src="js/processing.js" />
       <script type="text/javascript">
         // convenience function to get the id attribute of generated sketch html element
         function getProcessingSketchId () { return 'playp5banner'; }
-      </script>
-
-      <!-- playp5 custom javascript -->
-      <script src="js/playp5.js" type="text/javascript"></script>
-      <script type="text/javascript">
-	function convertVideoLinks(){
-		//convert youtube/vimeo links to embedded player
-		$("div.m-body a").each(function(){
-			if($(this).attr('href') == $(this).text()){
-				var url = $(this).text();
-				var output = getEmbeddedPlayer(url, 315, 560);	//parameters: url, player_height, player_width
-				if(output != ''){
-					$(this).replaceWith(output);
-				}
-			}
-		});
-	}
-
-	window.setInterval(convertVideoLinks, 1000);	//1000 milliseconds == 1 second
       </script>
    </head>
 
