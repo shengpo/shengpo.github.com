@@ -56,24 +56,7 @@
 		});
 	}
 
-	window.setInterval(convertVideoLinks, 500);	//500 milliseconds
-/*
-	$(document).ajaxSuccess(function(){
-		var curLocationHref = window.location.href;	//save current location's full href value
-		
-		convertVideoLinks();
-
-		$("div.m-moot").on("DOMSubtreeModified", convertVideoLinks);
-		$(window).on("hashchange", convertVideoLinks);
-
-		window.setInterval(function(){
-			if(window.location.href != curLocationHref){
-				curLocationHref = window.location.href;
-				convertVideoLinks();
-			}
-		}, 500);	//500 milliseconds
-	});
-*/
+	window.setInterval(convertVideoLinks, 1000);	//1000 milliseconds == 1 second
       </script>
    </head>
 
