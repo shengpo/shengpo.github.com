@@ -21,7 +21,7 @@ function convertMediaLinks(){
 	$("div.m-body a").each(function(){
 		if($(this).attr('href') == $(this).text()){
 			var url = $(this).text();
-			if(url.match(/^https?://(?:[a-z\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png)$/)){
+			if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?i)(jpg|png|gif)/)){
 				$(this).text("<img src='+url+' />");
 			}
 		}
