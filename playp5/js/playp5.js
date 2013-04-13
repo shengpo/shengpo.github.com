@@ -28,6 +28,7 @@ function convertMediaLinks(){
 		}
 	});
 
+/*
 	//convert image links
 	$("div.m-body a").each(function(){
 		var url = $(this).attr('href'); 
@@ -36,6 +37,7 @@ function convertMediaLinks(){
 		}
 	});
 	//$('.size-A').muImageResize({width: 150, height:200});
+*/
 }
 
 
