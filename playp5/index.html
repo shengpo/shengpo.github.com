@@ -43,16 +43,22 @@
       <!-- playp5 custom javascript -->
       <script src="js/playp5.js" type="text/javascript"></script>
       <script type="text/javascript">
-	//convert youtube/vimeo links to embedded player
-	$('.m-body a').each(function(){
-		if($(this).attr('href') == $(this).val()){
-			var url = $(this).val();
-			var output = getEmbeddedPlayer(url, 315, 560);	//parameters: url, player_height, player_width
-			if(output != ''){
-				$(this).replaceWith(output);
+//	$.when($.ajax("http://api.moot.it/playp5")).done(function(){
+		//convert youtube/vimeo links to embedded player
+		$('div.m-body a').each(function(){
+			alert("bang");
+/*
+			if($(this).attr('href') == $(this).val()){
+				var url = $(this).val();
+				var output = getEmbeddedPlayer(url, 315, 560);	//parameters: url, player_height, player_width
+				if(output != ''){
+					//$(this).replaceWith(output);
+					$(this).apend(output);
+				}
 			}
-		}
-	});
+*/
+		});
+//	});
       </script>
    </head>
 
