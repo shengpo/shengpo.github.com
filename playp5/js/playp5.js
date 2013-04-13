@@ -21,7 +21,7 @@ function convertMediaLinks(){
 	$("div.m-body a").each(function(){
 		var url = $(this).attr('href'); 
 		if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
-			$(this).text("<img src='"+url+"' />");
+			$(this).text().replaceWidth("<img src='"+url+"' />");
 		}
 	});
 	//$('.size-A').muImageResize({width: 150, height:200});
