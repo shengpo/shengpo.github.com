@@ -10,13 +10,25 @@ by shengpo (shengpo.github.io)
 
 
 
-//let window to convert video links periodly
-window.setInterval(convertVideoLinks, 1000);	//1000 milliseconds == 1 second
+//let window to convert video and image links periodly
+window.setInterval(convertMediaLinks, 1000);	//1000 milliseconds == 1 second
 
 
 
-//convert youtube/vimeo links to embedded player
-function convertVideoLinks(){
+//convert youtube/vimeo links to embedded player & convert image links to thumbnail and lightbox style
+function convertMediaLinks(){
+	//convert image links
+	$("div.m-body a").each(function(){
+		if($(this).attr('href') == $(this).text()){
+			var url = $(this).text();
+			if(url.match(/^http:\/\/[\s]+(\.(?i)(jpg|png|gif|bmp))$/)){
+				$(this).text("<img src='+url+' />");
+			}
+		}
+	});
+	//$('.size-A').muImageResize({width: 150, height:200});
+
+	//convert video links
 	$("div.m-body a").each(function(){
 		if($(this).attr('href') == $(this).text()){
 			var url = $(this).text();
