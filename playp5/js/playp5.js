@@ -19,11 +19,9 @@ window.setInterval(convertMediaLinks, 1000);	//1000 milliseconds == 1 second
 function convertMediaLinks(){
 	//convert image links
 	$("div.m-body a").each(function(){
-		if($(this).attr('href') == $(this).text()){
-			var url = $(this).text();
-			if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
-				$(this).text("<img src='+url+' />");
-			}
+		var url = $(this).attr('href'); 
+		if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
+			$(this).text("<img src='+url+' />");
 		}
 	});
 	//$('.size-A').muImageResize({width: 150, height:200});
