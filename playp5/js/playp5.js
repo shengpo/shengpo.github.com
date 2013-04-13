@@ -17,15 +17,6 @@ window.setInterval(convertMediaLinks, 1000);	//1000 milliseconds == 1 second
 
 //convert youtube/vimeo links to embedded player & convert image links to thumbnail and lightbox style
 function convertMediaLinks(){
-	//convert image links
-	$("div.m-body a").each(function(){
-		var url = $(this).attr('href'); 
-		if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
-			$(this).replaceWith("<a href='"+url+"'><img src='"+url+"' /></a>");
-		}
-	});
-	//$('.size-A').muImageResize({width: 150, height:200});
-
 	//convert video links
 	$("div.m-body a").each(function(){
 		if($(this).attr('href') == $(this).text()){
@@ -36,6 +27,15 @@ function convertMediaLinks(){
 			}
 		}
 	});
+
+	//convert image links
+	$("div.m-body a").each(function(){
+		var url = $(this).attr('href'); 
+		if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
+			$(this).replaceWith("<a href='"+url+"'><img src='"+url+"' /></a>");
+		}
+	});
+	//$('.size-A').muImageResize({width: 150, height:200});
 }
 
 
