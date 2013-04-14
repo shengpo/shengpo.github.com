@@ -40,7 +40,11 @@ function convertMediaLinks(){
 	});
 
 	//resize and crop images
-	$(".muResize").muImageResize({width: 100, height:100});
+	$("div.m-body img.muResize").each(function(){
+		$(this).muImageResize({width: 100, height:100});
+		$(this).removeClass("muResize");
+		$(this).addClass("muResizeDone");
+	}
 }
 
 
