@@ -54,6 +54,7 @@ function convertMediaLinks(){
 	$("div.m-body a.fancybox").each(function(){
 		if($(this).hasClass("fancyboxDone") == false){
 			$(this).removeClass("fancybox");
+			$(this).addClass("fancyDone");
 			$(this).fancybox();
 		}
 	});
