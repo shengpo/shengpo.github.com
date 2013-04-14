@@ -32,14 +32,15 @@ function convertMediaLinks(){
 	//convert image links
 	$("div.m-body a").each(function(){
 		var url = $(this).attr('href'); 
-//		if(url.match(/(http(s?):)|([\/|.|\w|\s])*"$/) == false){	//±ÜÃâurl±»mootÕ`ÅÐ, ÒÔÆæ¹ÖµÄ·ûÌ–½YÎ², ÀýÈç£º"
-//			if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
-			if(url.match(/\.(?:jpg|gif|png)$/)){
-				$(this).replaceWith("<a href='"+url+"'><img src='"+url+"' /></a>");
-			}
-//		}
+
+		//if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
+		if(url.match(/\.(?:jpg|gif|png)$/)){
+			$(this).replaceWith("<a href='"+url+"'><img class='muResize' src='"+url+"' /></a>");
+		}
 	});
-	//$('.size-A').muImageResize({width: 150, height:200});
+
+	//resize and crop images
+	$(".muResize").muImageResize({width: 100, height:100});
 }
 
 
