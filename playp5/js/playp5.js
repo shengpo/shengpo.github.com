@@ -35,31 +35,17 @@ function convertMediaLinks(){
 
 		//if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png|JPG|GIF|PNG)/)){
 		if(url.match(/\.(?:jpg|gif|png|JPG|GIF|PNG)$/)){
-			$(this).replaceWith("<a class='fancybox' rel='group' target='_new' href='"+url+"'><img class='muResize' width='300' src='"+url+"' /></a>");
+			$(this).replaceWith("<a class='fancybox' target='_new' href='"+url+"'><img width='300' src='"+url+"' /></a>");
 		}
 	});
 
 
-	//add fancy box effect
-//	$("div.m-body a.fancybox[]").fancybox();
-/*
-	$("div.m-body a.fancybox").each(function(){
-		if($(this).hasClass("fancyboxDone") == false){
-			$(this).addClass("fancyboxDone");
-			$(this).fancybox();
-			alert("bang");
-		}
-	});
-*/
+	//add fancy box effect for every converted image
 	$("div.m-body a.fancybox").each(function(){
 		$(this).removeClass("fancybox");
 		$(this).addClass("fancyDone");
 		$(this).fancybox();
 	});
-
-
-//	//resize and crop images
-//	$("div.m-body img.muResize").muImageResize({width: 100, height:100});
 }
 
 
