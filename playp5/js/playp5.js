@@ -36,7 +36,7 @@ function convertMediaLinks(){
 		//if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
 		if(url.match(/\.(?:jpg|gif|png)$/)){
 //			$(this).replaceWith("<a target='_new' href='"+url+"'><img class='muResize' src='"+url+"' /></a>");
-			$(this).replaceWith("<div><img class='muResize' src='"+url+"' /></div>");
+			$(this).replaceWith("<a target='_new'><img class='muResize' src='"+url+"' /></a>");
 		}
 	});
 
