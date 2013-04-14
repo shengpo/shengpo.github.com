@@ -30,18 +30,17 @@ function convertMediaLinks(){
 
 
 	//convert image links
-	$("div.m-body a").each(function(){
+	$("div.m-body a[class!=playp5ed]").each(function(){
 		var url = $(this).attr('href'); 
 
 		//if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
 		if(url.match(/\.(?:jpg|gif|png)$/)){
-//			$(this).replaceWith("<a target='_new' href='"+url+"'><img class='muResize' src='"+url+"' /></a>");
-			$(this).replaceWith("<a target='_new'><img class='muResize' src='"+url+"' /></a>");
+			$(this).replaceWith("<a class='playp5ed' target='_new' href='"+url+"'><img class='muResize' src='"+url+"' /></a>");
 		}
 	});
 
 	//resize and crop images
-	$("div.m-body img.muResize").muImageResize({width: 100, height:100});
+//	$("div.m-body img.muResize").muImageResize({width: 100, height:100});
 }
 
 
