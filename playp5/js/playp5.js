@@ -30,7 +30,7 @@ function convertMediaLinks(){
 
 
 	//convert image links
-	$("div.m-body a[class!=fancybox]").each(function(){
+	$("div.m-body a[class!=fancybox][class!=fancyDone]").each(function(){
 		var url = $(this).attr('href'); 
 
 		//if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png|JPG|GIF|PNG)/)){
@@ -52,11 +52,9 @@ function convertMediaLinks(){
 	});
 */
 	$("div.m-body a.fancybox").each(function(){
-		if($(this).hasClass("fancyboxDone") == false){
-			$(this).removeClass("fancybox");
-			$(this).addClass("fancyDone");
-			$(this).fancybox();
-		}
+		$(this).removeClass("fancybox");
+		$(this).addClass("fancyDone");
+		$(this).fancybox();
 	});
 
 
