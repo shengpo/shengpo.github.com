@@ -41,11 +41,12 @@ function convertMediaLinks(){
 
 
 	//add fancy box effect
-//	$("div.m-body a.fancybox").fancybox();
+//	$("div.m-body a.fancybox[]").fancybox();
 	$("div.m-body a.fancybox").each(function(){
 		if($(this).hasClass("fancyboxDone") == false){
 			$(this).addClass("fancyboxDone");
 			$(this).fancybox();
+			alert("bang");
 		}
 	});
 
