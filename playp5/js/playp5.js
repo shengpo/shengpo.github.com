@@ -35,11 +35,11 @@ function convertMediaLinks(){
 
 		//if(url.match(/(http(s?):)|([\/|.|\w|\s])*\.(?:jpg|gif|png)/)){
 		if(url.match(/\.(?:jpg|gif|png)$/)){
-			$(this).replaceWith("<a class='playp5ed' target='_new' href='"+url+"'><img class='muResize' src='"+url+"' /></a>");
+			$(this).replaceWith("<a class='playp5ed' target='_new' href='"+url+"'><img class='muResize' width='150' src='"+url+"' /></a>");
 		}
 	});
 
-	//resize and crop images
+//	//resize and crop images
 //	$("div.m-body img.muResize").muImageResize({width: 100, height:100});
 }
 
