@@ -39,14 +39,12 @@ function convertMediaLinks(){
 		}
 	});
 
+}
+
 	//resize and crop images
 	$("div.m-body img.muResize").each(function(){
 		$(this).muImageResize({width: 100, height:100});
-		$(this).removeClass("muResize");
-		$(this).addClass("muResizeDone");
 	}
-}
-
 
 /*
 getEmbeddedPlayer() is modified from "http://labs.steveottenad.com/jquery-to-parse-youtube-vimeo-urls/"
