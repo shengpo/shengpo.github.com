@@ -29,6 +29,8 @@ function convertMediaLinks(){
 	});
 
 
+/* temporarily to use moot official image plugin, put following image-link-convert function in comment.
+
 	//convert image links
 	$("div.m-body a[class!=fancybox][class!=fancyDone]").each(function(){
 		var url = $(this).attr('href'); 
@@ -46,6 +48,7 @@ function convertMediaLinks(){
 		$(this).addClass("fancyDone");
 		$(this).fancybox();
 	});
+*/
 }
 
 
