@@ -13,7 +13,7 @@
 
       <!-- *** original Moot setting *** -->
       <link type="text/css" rel="stylesheet" href="http://cdn.moot.it/1/moot.css"/>	<!-- Moot look and feel -->
-      <script type="text/javascript" src="http://cdn.moot.it/1.2/moot.tw.min.js"></script>	<!-- Moot client application with Traditional Chinese version (TW) -->
+      <script type="text/javascript" src="http://cdn.moot.it/1.3/moot.tw.min.js"></script>	<!-- Moot client application with Traditional Chinese version (TW) -->
 												<!-- official image plugin is incuded since moot version 1.2 -->
 
       <!-- *** customizing playp5 here *** -->
@@ -48,7 +48,30 @@
 	</noscript>
     	</div>
 
-      <!-- Placeholder for the forum. The forum will be rendered inside this element -->
-      <a class="moot" href="https://moot.it/i/playp5">Play+Processing Forum</a>
+        <!-- Placeholder for the forum. The forum will be rendered inside this element -->
+	<!-- this is a typical usage :
+        <a class="moot" href="https://moot.it/i/playp5">Play+Processing Forum</a>
+	-->
+
+	<!-- Moot placeholder tag -->
+	<!-- this is a customized usage for inserting custom HTML part, sticky post, nested categories, unlisted categories, custom footer -->
+	<!-- for more info, please refer to https://moot.it/docs/custom-navigation.html -->
+	<div class="moot">
+		<!-- Moot API -->
+		<a class="moot-url" href="https://moot.it/i/playp5">Play+Processing Forum</a>
+	 
+		<!-- nested categories -->
+		<!-- //... -->
+
+		<!-- Custom HTML -->
+		<!-- //... -->
+	 
+		<!-- sticky posts -->
+		<!-- //... -->
+
+		<div class="moot-footer">
+			<!-- //... -->
+		</div>
+	</div>
    </body>
 </html>
