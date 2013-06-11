@@ -9,10 +9,10 @@ by shengpo (shengpo.github.io)
 ************/
 
 
+/**** temporarily to use moot official image/video plugin, put following functions in comment.
 
 //let window to convert video and image links periodly
 window.setInterval(convertMediaLinks, 1000);	//1000 milliseconds == 1 second
-
 
 
 //convert youtube/vimeo links to embedded player & convert image links to thumbnail and lightbox style
@@ -28,8 +28,6 @@ function convertMediaLinks(){
 		}
 	});
 
-
-/* temporarily to use moot official image plugin, put following image-link-convert function in comment.
 
 	//convert image links
 	$("div.m-body a[class!=fancybox][class!=fancyDone]").each(function(){
@@ -48,8 +46,8 @@ function convertMediaLinks(){
 		$(this).addClass("fancyDone");
 		$(this).fancybox();
 	});
-*/
 }
+****/
 
 
 /*
